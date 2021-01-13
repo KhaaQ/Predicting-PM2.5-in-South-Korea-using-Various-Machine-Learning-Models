@@ -1,4 +1,10 @@
+# Written By: Khaula
+# Feb 12th, 2020
 
+# Standard imports
+
+
+# This code describes the dataset and features used in the project
 
 
 import pandas as pd
@@ -8,7 +14,7 @@ import seaborn as sns
 from pandas.plotting import scatter_matrix
 
 
-dataset = pd.read_csv('/home/khaula/Desktop/PM10_LSTM_From_Jan1/AllDataPrep_Feb10.csv', header=0) # Linear Interpolation of Pm2.5 Values
+dataset = pd.read_csv('~/AllDataPrep_Feb10.csv', header=0) # Linear Interpolation of Pm2.5 Values
 
 # print('dataset data types', dataset.dtypes)
 print('dataset.shape', dataset.shape)
@@ -38,7 +44,7 @@ dataset.drop([ 'WDIR(deg)', 'CMAQ_H2SO4(pptv)','CMAQ_CO(ppmv)', 'CMAQ_O3(ppbv)',
 #print(dataset.head(5))
 
 
-
+# Uncomment these commads to show the data distribution:
 #PM25 = dataset['OBS_PM2.5(ug/m3)']
 #PM10 = dataset['OBS_PM10(ug/m3)']
 #plt.scatter(PM25, PM10 )
@@ -50,14 +56,14 @@ print(dataset.describe())
 plt.figure(figsize=(30,20))
 scatter_matrix(dataset)
 
-plt.savefig('/home/khaula/Desktop/PM10_LSTM_From_Jan1/GwangjuStationsData/Data_Prep/ScatterMatrixCorrelation3.png')
+plt.savefig('~/ScatterMatrixCorrelation3.png')
 plt.show()
 
 
 # Use pandas library to plot each feature distribution: Histogram
 #features = dataset.loc[:, 'OBS_PM2.5(ug/m3)': 'CMAQ_OTHR(ug/m3)']
 #features.hist(figsize=(16, 10))
-#plt.savefig('/home/khaula/Desktop/PM10_LSTM_From_Jan1/GwangjuStationsData/Data_Prep/HistogramAll.png')
+#plt.savefig('~/HistogramAll.png')
 #plt.show()
 
 # Use pandas library to plot each feature Correlation:
@@ -68,7 +74,7 @@ plt.show()
 #cor = dataset.corr()
 #sns.heatmap(cor, annot=True, cmap=plt.cm.Reds)
 #plt.title("Selected Features Correlation", y=-0.1)
-#plt.savefig('/home/khaula/Desktop/PM10_LSTM_From_Jan1/GwangjuStationsData/Data_Prep/Selected_FeatureCorrelation.png')
+#plt.savefig('~/Selected_FeatureCorrelation.png')
 #plt.show()
 
 
