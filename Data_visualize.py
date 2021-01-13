@@ -1,10 +1,12 @@
+# This code describes the dataset and features used in this project
+
 # Written By: Khaula
 # Feb 12th, 2020
 
 # Standard imports
 
 
-# This code describes the dataset and features used in the project
+
 
 
 import pandas as pd
@@ -14,7 +16,7 @@ import seaborn as sns
 from pandas.plotting import scatter_matrix
 
 
-dataset = pd.read_csv('~/AllDataPrep_Feb10.csv', header=0) # Linear Interpolation of Pm2.5 Values
+dataset = pd.read_csv('~/AllDataPrep_Feb10.csv', header=0) # this is the preprocessed files in which missing values were filled by Linear Interpolation for PM2.5
 
 # print('dataset data types', dataset.dtypes)
 print('dataset.shape', dataset.shape)
