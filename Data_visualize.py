@@ -1,4 +1,4 @@
-# This code describes the dataset and features used in this project
+# This code describes and visualize the dataset and its features used in this project
 
 # Written By: Khaula
 # Feb 12th, 2020
@@ -37,7 +37,7 @@ dataset.drop([ 'Date_Time', 'LAT','LON'],  axis=1, inplace=True)
 #cor = dataset.corr()
 #sns.heatmap(cor, annot=True, cmap=plt.cm.Reds)
 #plt.title("Features Correlation", y=-0.1)
-#plt.savefig('/home/khaula/Desktop/PM10_LSTM_From_Jan1/GwangjuStationsData/Data_Prep/FeatureCorrelation2.png')
+#plt.savefig('~/FeatureCorrelation2.png')
 #plt.show()
 
 
